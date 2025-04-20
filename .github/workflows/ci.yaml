@@ -26,6 +26,9 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
 
+      - name: Terraform Init #(Ensure Providers Are Installed)
+        run: terraform init
+
       - name: Terraform fmt
         id: fmt
         run: terraform fmt -check
