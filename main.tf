@@ -6,6 +6,10 @@ terraform {
     }
   }
 }
+provider "aws" {
+  region = "us-east-1"
+}
+
 
 resource "aws_iam_role" "lambda_role" {
   name = "lambda-exec-role"
